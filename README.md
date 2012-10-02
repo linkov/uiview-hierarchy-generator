@@ -6,12 +6,13 @@ This script gets all names of views available to LLDB and all subviews of views 
 1) setup proper path in generateHTML()
 
 ##Xcode
-1) import the script
-- command script import ~/Dropbox/python/utils.py
-2) assign alias
-- command script add -f utils.printviews pv
-3) create breakpoint anywhere where self is in scope
-4) call script from debug panel
-- (lldb) pv
+- import the script
+command script import ~/Dropbox/python/utils.py
+- assign alias
+command script add -f utils.printviews pv
+- create breakpoint anywhere where self is in scope
+- call script from debug panel
+(lldb) pv
+
 ##Web browser
 5) reload Output.html
