@@ -7,7 +7,7 @@ This script gets all names of views available to LLDB and all subviews of views 
 
 ##Xcode
 - import the script (EX: command script import ~/Dropbox/python/viewgen.py)
-- assign alias (EX: command script add -f utils.printviews pv)
+- assign alias (EX: command script add -f viewgen.printviews pv)
 - create breakpoint anywhere where self is in scope
 - call script from debug panel ( (lldb) pv )
 
