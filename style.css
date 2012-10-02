@@ -1,0 +1,20 @@
+.viewitem {
+
+	font: 14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	color: gray;
+}
+
+li,ul {
+	display: none;
+	cursor: pointer;
+}
+
+body {
+
+	width: 500px;
+}
+
+body > ul, body > ul > li {
+
+	display: block;
+}
