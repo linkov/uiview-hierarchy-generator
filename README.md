@@ -11,6 +11,3 @@ This script gets all names of views available to LLDB and all subviews of views 
 - create breakpoint anywhere where self is in scope
 - call script from debug panel ( (lldb) pv )
 - reload script before you want to use it again within the same debug session otherwise the hierarchy gets duplicated ( (lldb) script reload(viewgen) )
-
-##Web browser
-5) reload Output.html
