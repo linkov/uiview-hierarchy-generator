@@ -11,7 +11,7 @@ page = markup.page()
 page.init( title="View Hierarchy", css=( 'style.css',),script={'jquery.js':'javascript','main.js':'javascript'}, header="--///--", footer="--///--" )
 
 def generateHTML():
-    filename = "/Users/toyota8/Dropbox/python/vg/Output.html"
+    filename = os.path.dirname(os.path.abspath(__file__))+"/Output.html"
     outputfile = open(filename, "w+")
     outputfile.write(str(page))
     outputfile.close()
