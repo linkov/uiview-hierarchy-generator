@@ -11,9 +11,11 @@ page = markup.page()
 page.init( title="View Hierarchy", css=( 'style.css',),script={'jquery.js':'javascript','main.js':'javascript'}, header="--///--", footer="--///--" )
 
 def generateHTML():
-    outputfile = open("/Users/toyota8/Dropbox/python/vg/Output.html", "w+")
+    filename = "/Users/toyota8/Dropbox/python/vg/Output.html"
+    outputfile = open(filename, "w+")
     outputfile.write(str(page))
     outputfile.close()
+    print "generated "+filename
 
 
 def buildViewHierarchy(viewNode,depth):
