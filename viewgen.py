@@ -6,15 +6,14 @@ import markup
 import os
 
 namesDictionary = {}
-items =[]
 
-page = markup.page( )
-page.init( title="View Hierarchy", css=( 'style.css',),script={'jquery.js':'javascript','main.js':'javascript'}, header=" ", footer=" " )
+page = markup.page()
+page.init( title="View Hierarchy", css=( 'style.css',),script={'jquery.js':'javascript','main.js':'javascript'}, header="--///--", footer="--///--" )
 
 def generateHTML():
-    text_file = open("/Users/admin/Dropbox/python/vg/Output.html", "w")
-    text_file.write(str(page))
-    text_file.close()
+    outputfile = open("/Users/toyota8/Dropbox/python/vg/Output.html", "w+")
+    outputfile.write(str(page))
+    outputfile.close()
 
 
 def buildViewHierarchy(viewNode,depth):
@@ -49,9 +48,8 @@ def collectKnownViewNames(mainNode,subNodesCount,nm):
             collectKnownViewNames(node,node.GetNumChildren(),nm+"-")
  
 def printviews(debugger, command_line, result, dict):
- 
     fn = lldb.frame.GetFunctionName()
-    print fn
+    print "preparing hierarchy in "+fn
     viewCount = lldb.frame.EvaluateExpression('(int)[[self.view subviews] count]').GetValue()
     viewNode = lldb.frame.EvaluateExpression("self.view").GetValue()
     viewNodeType = lldb.frame.EvaluateExpression("(id)[self class]").GetObjectDescription()
